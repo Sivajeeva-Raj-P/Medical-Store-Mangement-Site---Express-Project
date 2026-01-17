@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Medicine</title>
+</head>
+<body>
+
+  <h2>Edit Medicine</h2>
+
+  <form action="/edit/<%= medicine._id %>" method="post">
+
+    <label for="name">Medicine Name:</label><br>
+    <input type="text" id="name" name="name" value="<%= medicine.name %>" required><br><br>
+
+    <label for="stock">Available Stock:</label><br>
+    <input type="number" id="stock" name="stock" value="<%= medicine.stock %>" required><br><br>
+
+    <button type="submit">Update</button>
+
+  </form>
+
+  <br>
+  <a href="/medicines">Back to list</a>
+
+</body>
+</html>
